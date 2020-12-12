@@ -1,0 +1,20 @@
+@mixin flexible() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flexible-column() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin active($color, $color_text) {
+  background-color: $color;
+  color: $color_text;
+}

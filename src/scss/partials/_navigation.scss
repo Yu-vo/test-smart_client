@@ -1,0 +1,26 @@
+@import '../utils/mixin';
+@import '../utils/variable';
+$color-active: $color-blue;
+$color-hover: $color-light-blue;
+.nav {
+  display: flex;
+  justify-content: center;
+
+  &__link {
+    width: 50%;
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+
+    &-search {
+      text-align: end;
+    }
+  }
+  & .active {
+    @include active($color-blue, rgb(255, 255, 255));
+  }
+}

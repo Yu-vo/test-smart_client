@@ -1,0 +1,50 @@
+@import '../utils/mixin';
+@import '../utils/variable';
+$width-search: 70vw;
+.search-field {
+  @include reset;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: $width-search;
+  height: 55px;
+
+  &__input {
+    width: $width-search;
+    min-width: 250xpx;
+    height: 40px;
+
+    padding: 0 50px;
+
+    border: solid 1px #d9d9d9;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+  }
+  &__button {
+    @include reset;
+    position: absolute;
+
+    margin: 0 2px;
+
+    width: 50px;
+    height: 33px;
+
+    right: 0;
+
+    border: none;
+    border-left: solid 1px #d9d9d9;
+    background-color: white;
+
+    cursor: pointer;
+  }
+}
+@media (max-width: 550px) {
+  .search-field {
+    width: 95vw;
+    &__input {
+      width: 95vw;
+    }
+  }
+}
